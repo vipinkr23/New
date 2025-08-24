@@ -4,8 +4,8 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
-- test1
+  - main
+  - test1
 
 pool: new
 
