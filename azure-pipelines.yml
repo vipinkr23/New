@@ -16,18 +16,15 @@ steps:
     terraformVersion: 'latest'
 
 - task: TerraformTask@5
-  displayName: Terraform init
   inputs:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)\new'
-    backendServiceArm: 'Test'
-    backendAzureRmOverrideSubscriptionID: '6eb6ee21-8952-4718-9243-5a0101ee200e'
+    backendServiceArm: 'Azure subscription 1(6eb6ee21-8952-4718-9243-5a0101ee200e)'
     backendAzureRmResourceGroupName: 'vipintest'
     backendAzureRmStorageAccountName: 'vipinst123'
     backendAzureRmContainerName: 'stvipin123'
-    backendAzureRmKey: 'stvipin.tfstate'
-
+    backendAzureRmKey: 'terrafrom.tfstate'
 
 - task: TerraformTask@5
   displayName: terraform validate
