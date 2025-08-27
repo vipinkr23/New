@@ -8,13 +8,16 @@ terraform {
 }
 
 provider "azurerm" {
-subscription_id = "8047b6da-5aca-4a1b-a741-1c075ee56791"
+subscription_id = "6eb6ee21-8952-4718-9243-5a0101ee200e"
 features{}
 }
-
 
 resource "azurerm_resource_group" "rg-vips" {
   name     = "vipintest"
   location = "West US"
   }
 
+resource "azurerm_resource_group" "rg-vips3" {
+  name     = "vipintest3"
+  location = "West US"
+  }
